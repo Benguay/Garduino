@@ -55,6 +55,20 @@ pinMode(relay3, OUTPUT);
 digitalWrite(relay3, LOW);
 pinMode(relay4, OUTPUT);
 digitalWrite(relay4, LOW);
+
+//Take air Values three seconds after resetting/upload
+delay(3000);
+airValue1 = analogRead(soil1);
+airValue2 = analogRead(soil2);
+airValue3 = analogRead(soil2);
+airValue4 = analogRead(soil2);
+
+//Take water values 15 seconds after taking the water values
+delay(15000);
+waterValue1 = analogRead(soil1);
+waterValue2 = analogRead(soil2);
+waterValue3 = analogRead(soil3);
+waterValue4 = analogRead(soil4);
 }
 
 void loop() {
